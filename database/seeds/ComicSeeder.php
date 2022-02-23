@@ -1,6 +1,8 @@
 <?php
 
+use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
+use App\Comic;
 
 class ComicSeeder extends Seeder
 {
@@ -9,7 +11,7 @@ class ComicSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         //
     }
