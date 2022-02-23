@@ -43,11 +43,18 @@ class ComicController extends Controller
         $dataArray = $request->all();
         $comic = new Comic();
         $comic->title = $dataArray['title'];
+        $comic->number_of_pages = $dataArray['number_of_pages'];
+        $comic->author = $dataArray['author'];
+        $comic->edition = $dataArray['edition'];
+        $comic->thumb = $dataArray['thumb'];
+        $comic->description = $dataArray['description'];
+        $comic->publishing_house = $dataArray['publishing_house'];
+        $comic->price = $dataArray['price'];
         $save= $comic->save();
         if(!$save){
             dd('Salvataggio non riuscito');
         }
-        return redirect()->route('comics.show, $comic->id');
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
