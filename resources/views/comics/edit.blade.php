@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container p-5">
         <div class="row">
           <form action="{{ route('comics.update' , $comic->id  )}}" method="post">
             @csrf
@@ -42,7 +42,7 @@
               <label for="publishing_house" class="form-label">Publishing House</label>
               <input type="text" class="form-control" id="publishing_house" name="publishing_house" value="{{$comic->publishing_house}}">
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-dark">Save</button>
           </form>
         </div>
     </div>
