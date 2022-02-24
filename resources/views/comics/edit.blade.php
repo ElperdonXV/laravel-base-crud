@@ -1,13 +1,13 @@
 @extends('layouts.base')
 
 @section('documentTitle')
-    Edit
+    Edit {{ $comic->title}}
 @endsection
 
 @section('content')
     <div class="container">
         <div class="row">
-          <form action="{{ route('comics.update') }}" method="post">
+          <form action="{{ route('comics.update' , $comic->id  )}}" method="post">
             @csrf
             @method('PATCH')
             <div class="mb-3">
