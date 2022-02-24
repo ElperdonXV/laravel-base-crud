@@ -12173,3 +12173,25 @@ fieldset:disabled .btn {
   }
 }
 
+.container-top {
+  height: 100vh;
+  width: 100%;
+}
+
+.container-top .bg-left {
+  background-color: black;
+  height: 100%;
+}
+
+.container-top .bg-left h1,
+.container-top .bg-left .h1,
+.container-top .bg-left p {
+  color: white;
+}
+
+.container-top .bg-head {
+  background-image: url("https://img3.goodfon.com/wallpaper/nbig/c/2e/marvel-comics-spider-man-7056.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
