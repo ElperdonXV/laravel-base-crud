@@ -6,16 +6,18 @@
 
 @section('content')
     <div class="container-top">
-        <div class="row">
-            <div class="col bg-left">
+        <div class="row h-100">
+            <div class="col-5 bg-left">
               <h1>Welcome to comics DB Shop</h1>
-              <p>
+              <div class="description">
+                <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                   Maiores neque nobis qui possimus aspernatur consequuntur, veniam expedita dignissimos. 
                   Omnis et earum iusto dolor voluptatibus. Iure fuga quasi adipisci blanditiis aut!
                 </p>
+              </div>
             </div>
-            <div class="col bg-head">
+            <div class="col-7 bg-head">
             </div>
         </div>
     </div>

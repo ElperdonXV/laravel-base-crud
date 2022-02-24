@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap);@import url(https://fonts.googleapis.com/css2?family=Staatliches&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
@@ -12173,14 +12173,25 @@ fieldset:disabled .btn {
   }
 }
 
+body {
+  font-family: "Pathway Gothic One", sans-serif !important;
+}
+
 .container-top {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
+  overflow-x: hidden;
+}
+
+.container-top .h-100 {
+  height: 100%;
 }
 
 .container-top .bg-left {
   background-color: black;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 100px 50px;
 }
 
 .container-top .bg-left h1,
@@ -12189,9 +12200,26 @@ fieldset:disabled .btn {
   color: white;
 }
 
+.container-top .bg-left h1,
+.container-top .bg-left .h1 {
+  font-size: 5em;
+  font-family: "Staatliches", cursive;
+  line-height: 0.77em;
+}
+
+.container-top .bg-left p {
+  font-size: 1.3em;
+}
+
+.container-top .bg-left .description {
+  margin-top: 250px;
+  padding: 0 20px;
+}
+
 .container-top .bg-head {
   background-image: url("https://img3.goodfon.com/wallpaper/nbig/c/2e/marvel-comics-spider-man-7056.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
