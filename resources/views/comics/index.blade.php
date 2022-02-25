@@ -41,7 +41,7 @@
                             <th>Editon</th>
                             <th>Pages</th>
                             <th>Price</th>
-                            <th>Actions</th>
+                            <th colspan="3">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="bg-black">
@@ -56,6 +56,13 @@
                             <td>
                                 <a class="btn btn-outline-light" href="{{ route('comics.show', $comic) }}">View</a>
                                 <a class="btn btn-outline-light" href="{{ route('comics.edit', $comic) }}">Edit</a>
+                            </td>
+                            <td>
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input class="btn btn-danger" type="submit" value="Delete">
+                                        </form>
                             </td>
                         </tr>
                     @endforeach
