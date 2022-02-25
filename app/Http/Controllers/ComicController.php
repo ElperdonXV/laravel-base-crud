@@ -12,6 +12,17 @@ class ComicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    protected $ruleValidation =  [
+        'title' => 'required|max:80',
+        'description' => 'nullable',
+        'author' => 'required|max:60',
+        'publishing_house'=> 'required|max:60',
+        'number_of_pages'=> 'nullable|max:200',
+        'thumb' => 'nullable | max:300',
+        'edition' => 'nullable | max:100',
+        'price'=> 'required',
+    ];
     public function index()
     {
         $comics = Comic::paginate(20);
@@ -40,6 +51,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate($this->ruleValidation);
         $dataArray = $request->all();
         $comic = new Comic();
         $comic->title = $dataArray['title'];
@@ -92,6 +104,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate($this->ruleValidation);
         $data = $request->all();
         $updated = $comic->update($data);
         if(!$updated){

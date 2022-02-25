@@ -41,7 +41,7 @@
                             <th>Editon</th>
                             <th>Pages</th>
                             <th>Price</th>
-                            <th colspan="3">Actions</th>
+                            <th colspan="2">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="bg-black">
